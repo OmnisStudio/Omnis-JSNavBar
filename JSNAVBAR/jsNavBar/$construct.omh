@@ -1,0 +1,23 @@
+;  Enter your initialization code here
+
+If $cwind().$name<>$cclass().$name     ;; form is in a subwindow
+	Do $cwind.$getConstructRow Returns pRow
+End If
+
+If pos('devicePixelRatio:2',pRow.jsDeviceInfo)     ;; use larger icons from #ICONS for hi res devices (icon sets not used so example is self contained for download)
+	Do $cinst.$objs.NavPic1.$iconid.$assign(111161)
+	Do $cinst.$objs.NavPic1.$noscale.$assign(kFalse)
+	Do $cinst.$objs.NavPic2.$iconid.$assign(111163)
+	Do $cinst.$objs.NavPic2.$noscale.$assign(kFalse)
+	Do $cinst.$objs.NavPic3.$iconid.$assign(111165)
+	Do $cinst.$objs.NavPic3.$noscale.$assign(kFalse)
+	Do $cinst.$objs.NavPic4.$iconid.$assign(111167)
+	Do $cinst.$objs.NavPic4.$noscale.$assign(kFalse)
+End If
+
+Do iPageList.$define(iPageNumber,iPageTitle,iRightButton)
+Do iPageList.$add(1,'Page 1','Page 2')
+Do iPageList.$add(2,'Page 2','Page 3')
+Do iPageList.$add(3,'Page 3','Page 4')
+Do iPageList.$add(4,'Page 4','')
+Do iPageList.$line.$assign(1)

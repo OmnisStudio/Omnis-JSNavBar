@@ -1,0 +1,2 @@
+On evUserChangedPage
+	Calculate iPageList.$line as pPageNumber

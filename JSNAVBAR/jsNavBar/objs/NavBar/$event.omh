@@ -1,0 +1,4 @@
+On evClickRightButton
+	Calculate iPageList.$line as iPageList.$line+1
+	Calculate iPageRow as iPageList
+	Do $cinst.$objs.NavBar.$push.$assign(iPageRow) Returns #F
